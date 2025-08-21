@@ -1,13 +1,15 @@
-//your JS code here. If required.
 window.onload = function() {
-	
-	let element = document.getElementByID("level");
-	let level = 0;
-	
-	while (element) {
-		level ++;
-		element = element.parentElement;
-	}
+  // Get the target element
+  let element = document.getElementById("level");  // ✅ fixed lowercase d
 
-	alert("The level of the elememt is:" +level);
-}
+  let level = 0;
+
+  // Traverse up through parent elements until reaching null
+  while (element) {
+    level++;
+    element = element.parentElement;
+  }
+
+  // Show result
+  alert("The level of the element is: " + level);
+};
